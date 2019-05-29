@@ -1,0 +1,62 @@
+[user]
+email = g.iusipov@gmail.com
+name = Gaiaz Iusipov
+
+[core]
+excludesfile = ~/.gitignore
+editor = nano
+autocrlf = input
+safecrlf = true
+[diff]
+tool = meld
+
+[difftool]
+prompt = false
+
+[push]
+default = simple
+
+[help]
+autoCorrect = 1
+
+[alias]
+# Shortcuts
+co = checkout
+ci = commit
+st = status
+br = branch
+
+# Useful commands
+prev = checkout -
+amend = commit --amend --no-edit
+pushf = push --force
+please = push --force-with-lease
+unstage = reset HEAD --
+last = log -1 HEAD
+free = branch -D
+fall = fetch --all
+
+# Push Origin
+po = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+
+# Tree-like log graph
+hist = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+
+# List branches sorted by last modified
+bl = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+# Unpushed branches
+unpushed = log --branches --not --remotes
+
+# Multialias
+repush = !git add . && git amend && git please
+clear = !git clean -df && git co -- .
+
+# External commands
+aliases = !git config -l | grep alias | cut -c 7-
+
+# Reset origin HEAD
+return = reset ORIG_HEAD
+refuse = reset --hard HEAD
+undo = reset --soft HEAD^
+back = reset HEAD^1 --hard
