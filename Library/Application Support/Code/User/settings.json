@@ -1,0 +1,6 @@
+{
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontLigatures": true,
+    "update.showReleaseNotes": false
+}
