@@ -5,8 +5,7 @@ name = Gaiaz Iusipov
 [core]
 excludesfile = ~/.gitignore
 editor = nano
-autocrlf = input
-safecrlf = true
+
 [diff]
 tool = meld
 
