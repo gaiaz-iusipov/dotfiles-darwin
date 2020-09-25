@@ -6,6 +6,9 @@ name = Gaiaz Iusipov
 excludesfile = ~/.gitignore
 editor = nano
 
+[init]
+templatedir = ~/.git-templates
+
 [diff]
 tool = meld
 
