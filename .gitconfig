@@ -2,6 +2,9 @@
 email = g.iusipov@gmail.com
 name = Gaiaz Iusipov
 
+[url "git@github.com:gaiaz-iusipov"]
+insteadOf = "https://github.com/gaiaz-iusipov"
+
 [core]
 excludesfile = ~/.gitignore
 editor = nano
