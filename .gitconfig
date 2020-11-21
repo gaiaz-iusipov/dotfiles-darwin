@@ -39,19 +39,19 @@ please = push --force-with-lease
 unstage = reset HEAD --
 last = log -1 HEAD
 free = branch -D
-fall = fetch --all
+fall = fetch --all --prune
 
 # Push Origin
-po = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+puor = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
 
 # Tree-like log graph
 hist = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
 
 # List branches sorted by last modified
-bl = "!git fetch --all --prune && git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)%09%(upstream:track)' refs/heads | sed -e 's-refs/heads/--'"
+brls = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)%09%(upstream:track)' refs/heads | sed -e 's-refs/heads/--'"
 
 # Remove tracking branches no longer on remote
-bc = "!for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'); do git free $branch; done"
+brcl = "!for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'); do git free $branch; done"
 
 # Unpushed branches
 unpushed = log --branches --not --remotes
