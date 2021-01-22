@@ -68,3 +68,6 @@ return = reset ORIG_HEAD
 refuse = reset --hard HEAD
 undo = reset --soft HEAD^
 back = reset HEAD^1 --hard
+
+[pull]
+rebase = false
