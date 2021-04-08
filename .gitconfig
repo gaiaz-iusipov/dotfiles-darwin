@@ -11,6 +11,7 @@ editor = nano
 
 [init]
 templatedir = ~/.git-templates
+defaultBranch = main
 
 [diff]
 tool = meld
