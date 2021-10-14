@@ -41,9 +41,10 @@ unstage = reset HEAD --
 last = log -1 HEAD
 free = branch -D
 fall = fetch --all --prune
+poll = pull --all --prune
 
 # Push Origin
-puor = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+puor = !git push -u origin $(git branch --show-current)
 
 # Tree-like log graph
 hist = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
@@ -72,3 +73,6 @@ back = reset HEAD^1 --hard
 
 [pull]
 rebase = false
+
+[includeIf "gitdir/i:~/work/**"]
+path = ~/work/.gitconfig
