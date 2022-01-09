@@ -5,13 +5,13 @@
         "revision": "407dafc7dbdacd1d897cfc79e8c3ab86a859ca71"
       },
       "homebrew/cask": {
-        "revision": "e36481719f851491fc295e30266f41a165f89ee9"
+        "revision": "412fb64a121fa6bc6a21746f8def6288098eaab7"
       },
       "homebrew/cask-fonts": {
-        "revision": "8a66990e0ccf51fd17a4cca5ad6025bc88030f1a"
+        "revision": "a0bb4a36c3d199caff30812fa677b90e6be1c3ae"
       },
       "homebrew/core": {
-        "revision": "3609079ce2a13417a8ab2245220a15ddb8ed383f"
+        "revision": "8024aa93656ca5f8623d39989aac7a3459fd4ec6"
       }
     },
     "brew": {
@@ -248,7 +248,7 @@
         }
       },
       "rectangle": {
-        "version": "0.49,54",
+        "version": "0.50,55",
         "options": {
           "full_name": "rectangle"
         }
@@ -270,6 +270,12 @@
         "options": {
           "full_name": "vlc"
         }
+      },
+      "syncthing": {
+        "version": "1.18.5-1",
+        "options": {
+          "full_name": "syncthing"
+        }
       }
     }
   },
@@ -278,9 +284,9 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3609079ce2a13417a8ab2245220a15ddb8ed383f",
-        "CLT": "12.5.0.22.9",
-        "Xcode": "12.5.1",
+        "Homebrew/homebrew-core": "8024aa93656ca5f8623d39989aac7a3459fd4ec6",
+        "CLT": "13.2.0.0.1.1638488800",
+        "Xcode": "13.1",
         "macOS": "12.1"
       }
     }
