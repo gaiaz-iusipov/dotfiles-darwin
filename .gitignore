@@ -6,3 +6,6 @@
 
 # Visual Studio Code
 .vscode/
+
+# OS files
+.DS_Store
