@@ -23,7 +23,7 @@ prompt = false
 default = simple
 
 [help]
-autoCorrect = 1
+autocorrect = 20
 
 [alias]
 # Shortcuts
