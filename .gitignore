@@ -5,7 +5,8 @@
 *.iws
 
 # Visual Studio Code
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 
 # OS files
 .DS_Store
