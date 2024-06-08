@@ -28,6 +28,7 @@ autocorrect = 20
 [alias]
 # Shortcuts
 co = checkout
+sw = switch
 ci = commit
 st = status
 br = branch --show-current
