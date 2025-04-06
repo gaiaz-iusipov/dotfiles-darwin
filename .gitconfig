@@ -45,7 +45,7 @@ fall = fetch --all --prune
 poll = pull --all --prune
 
 # Push Origin
-puor = !git push -u origin $(git branch --show-current)
+puor = !git push -u origin $(git br)
 
 # Tree-like log graph
 hist = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
@@ -71,6 +71,9 @@ return = reset ORIG_HEAD
 refuse = reset --hard HEAD
 undo = reset --soft HEAD^
 back = reset HEAD^1 --hard
+
+# Soft reset all commits in the current branch up to the specified branch
+resto = "!git reset $(git merge-base \"$1\" $(git br)) #"
 
 [pull]
 rebase = false
